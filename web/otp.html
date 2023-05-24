@@ -1,0 +1,139 @@
+<html>
+    <head> 
+        <link rel="stylesheet" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+        <title>Send Message</title>
+        <style>
+            body{
+                background-color: white;
+            }
+            .wallpaper{
+                background-image: url("https://replicate.delivery/pbxt/wxrezuHB0vwiS6dixCSMruXL2khRODyZ6c6DH2LWjX0MWMeQA/output.png");
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                width: 500px;
+                height: 500px;
+                position: fixed;
+                right: 0;
+                margin: 0 100px 0 0;
+                z-index: -1;
+            }
+            form{
+                width: 600px;
+                margin:150px auto 0 200px;
+                padding: 50px 20px 50px 20px;
+                border-radius: 25px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                backdrop-filter: blur(20px);
+                border:1px solid white;
+            }
+            h1{
+                text-align: center;
+                font-size: 40px;
+                font-family: 'Space Mono', monospace;
+            }
+            h4{
+                font-size: 22px;
+                text-align: center;
+                margin: 0 40px 0 40px;
+                font-family: 'Space Mono', monospace;
+            }
+            .buttons{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                margin-right: 70px;
+                margin-bottom: 40px;
+                font-family: 'Space Mono', monospace;
+            }
+            .button{
+                color: black;
+                margin-top: 20px;
+                font-weight: bold;
+                background-color: transparent;
+                width: 150px;
+                padding: 10px 25px;
+                font-size: 15px;
+                border: 2px solid black;
+                border-radius: 15px;
+                transition: all 0.3s;
+                text-align:center;
+                cursor:pointer;
+                font-family: 'Space Mono', monospace;
+                margin-left: 63px;
+            }
+            .button:hover{
+                background-color: #009900;
+                color:white;
+                transform: scale(1.1);
+            }
+            .btn{
+                color: black;
+                margin-top: 20px;
+                font-weight: bold;
+                background-color: transparent;
+                width: 150px;
+                padding: 10px 25px;
+                font-size: 15px;
+                border: 2px solid black;
+                border-radius: 15px;
+                transition: all 0.3s;
+                text-align:center;
+                cursor:pointer;
+                font-family: 'Space Mono', monospace;
+                margin-left: 50px;
+            }
+            .btn:hover{
+                background-color: #ff3333;
+                color:white;
+                transform: scale(1.1);
+            }
+            .container
+            {
+                height: auto;
+                text-align: center;
+            }
+            p{
+                font-size: 20px;
+                margin-right: 358px;
+                font-family: 'Space Mono', monospace;
+            }
+            .inputs{
+                width: 72%;
+                height: 40px;
+                padding: 10px;
+                border: 2px solid black;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wallpaper"></div>
+        <form method="post" action="http://localhost:8080/photography/sendotp">
+            <div class="container">
+                <h1>OTP Verification</h1>
+                <h4>Enter your email to verify your profile information.</h4>
+                <br>
+                <p>  Email: </p>
+                <input class="inputs" type="text" name="tbTo"/>
+
+                <input type="hidden" name="tbCC"/>
+
+
+                <input type="hidden" name="tbBCC" value="lenstory.official@gmail.com" />
+
+                <input type="hidden" name="tbSubject" value=" OTP "/>
+                <br>
+                <br>
+                <div class="buttons">
+                    <input class="button" type="submit" value="Send"/>
+                    <input class="btn" type="reset" value="Clear">
+                </div>
+            </div>
+        </form>
+         </body>
+</html>

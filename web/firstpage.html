@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com">
+        <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com">
+        <title>Home Page</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                height: 100%;
+                color:white;
+
+            }
+            .background {
+                margin: 0;
+                padding: 0;
+                background-image: url("https://images.wallpaperscraft.com/image/single/camera_hand_technology_166868_3840x2400.jpg");       
+                background-repeat: no-repeat;
+                background-size: cover;
+                height:100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                background-position: center;
+
+            }
+            h1 {
+                background-color: transparent;
+                font-family: 'Space Mono', monospace;
+                width:100%;
+                font-size: 20vw;
+                position: fixed;
+                z-index: 0;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-width: 4px;   
+                -webkit-text-stroke-color: white;  
+            }
+            .logo{
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -webkit-text-stroke-width: 8px;   
+                -webkit-text-stroke-color: white;  
+            }
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+                margin-top: 70px;
+                margin-left: 7%;
+                margin-right: 7%;
+                flex-wrap: nowrap;
+                font-family: 'Space Mono', monospace;
+                z-index: 1;
+                height:600px;
+            }
+
+            .card1 {
+                width: 30%;
+                background-color: rgba(255, 255, 255, 0.074);
+                border-radius: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 2.5vw;
+                border: 2px solid white;
+                backdrop-filter: blur(15px);
+                margin-right: 10%;
+                z-index: 2;
+                transition: 0.3s ease-in-out
+            }
+            .card1:hover{
+                transform: scale(1.03);
+            }
+            .card2 {
+                width: 30%;
+                background-color: rgba(255, 255, 255, 0.074);
+                border-radius: 40px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 2.5vw;
+                border: 2px solid white;
+                backdrop-filter: blur(15px);
+                z-index: 2;
+                transition: 0.3s ease-in-out
+            }
+            .card2:hover{
+                transform: scale(1.03);
+            }
+            h2 {
+                margin:2vw 0 3vw 0;
+                font-size: 40px;
+            }
+            p{
+                margin:2vw 0 3vw 0;
+                font-size: 25px;
+
+            }
+
+            button{
+                color: white;
+                font-weight: bold;
+                background: transparent;
+                width: 120px;
+                padding: 15px;
+                margin: 40px 0 20px 0;
+                font-size: 15px;
+                border: 2px solid white;
+                border-radius: 15px;
+                transition: all 0.3s;
+                cursor:pointer;
+                font-family: 'Space Mono', monospace;
+            }
+            button:hover{
+                background-color: white;
+                color:black;
+                transform: scale(1.1);
+            }
+            button span {
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="background"></div>
+        <div class="container">
+            <h1> L<span class="logo">en</span>st<span class="logo">or</span>y</h1>
+            <div class="card1">
+                <h2>Login</h2>
+                <p>Never miss a moment with our booking platform</p>
+                <button   onclick="goToLoginPage()" ><span>Login </span></button><br><br>
+            </div>
+            <div class="card2">
+                <h2>Sign Up</h2>
+                <p>Sign up and let's capture your vision together</p>
+                <button   onclick="goToSignUpPage()" ><span>Sign Up </span></button><br><br>
+
+            </div>
+        </div>
+        <script>
+            function goToLoginPage() {
+                window.location.href = "login.jsp";
+            }
+            function goToSignUpPage() {
+                window.location.href = "signup.jsp";
+            }
+        </script>
+    </body>
+</html>
